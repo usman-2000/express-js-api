@@ -12,13 +12,21 @@ const orderItemSchema = new mongoose.Schema({
     }
 })
 
-const billingAddressSchema = new mongoose.Schema{
+const billingAddressSchema = new mongoose.Schema({
     houseNumber: {
         type: String,
         required:true
+    },
+    street:{
+        type: String,
+        required: true
+    },
+    city:{
+        type: String,
+        required: true
     }
 }
-
+)
 const orderSchema = new mongoose.Schema({
     orderPrice : {
         type: Number,
@@ -29,15 +37,12 @@ const orderSchema = new mongoose.Schema({
         ref:'User',
         required: true
     },
-    orderItems : [orderItemSchema],
-    billingAddress:{
-        type:String,
-        required: true
-    },
     phoneNumber:{
         type: String,
         required: true
-    }
+    },
+    orderItems : [orderItemSchema],
+    billingAddress: billingAddressSchema,
 
 },{timestamps:true})
 
