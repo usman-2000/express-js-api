@@ -14,7 +14,7 @@ const medicinesSchema = new mongoose.Schema({
         required: true
     },
     routine:{
-        type:STring,
+        type:String,
         enum:['1+1+1','1+0+1',"1+0+0",'0+1+1','0+0+1'],
         default: '1+1+1'
     }
