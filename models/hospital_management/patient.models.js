@@ -14,9 +14,9 @@ const patientSchema = new mongoose.Schema({
         required:true
     },
     gender:{
-type: String,
-enum:['M',"F",'O'],
-required: true
+        type: String,
+        enum:['M',"F",'O'],
+        required: true
     },
     admitted_in:{
         type: mongoose.Schema.Types.ObjectId,

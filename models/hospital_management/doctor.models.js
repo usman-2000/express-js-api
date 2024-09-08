@@ -9,6 +9,10 @@ const doctorSchema = new mongoose.Schema({
         type :Number,
         required: true
     },
+    salary:{
+        type:Number,
+        required:true
+    },
     qualification:{
         type:String,
         required:true
