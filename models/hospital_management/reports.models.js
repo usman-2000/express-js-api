@@ -12,6 +12,7 @@ const medicinesSchema = new mongoose.Schema({
     brand_name:{
         type: String,
         required: true
+        
     },
     routine:{
         type:String,
